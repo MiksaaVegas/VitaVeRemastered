@@ -1,0 +1,83 @@
+@import "mixins";
+@import "variables";
+#carouselExampleSlidesOnly{
+    #heroContent{
+        position: absolute;
+        display: block;
+        z-index: 10;
+        .row{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #logoCol{
+            text-align: center;
+            img{
+                padding-top: 6rem;
+            }
+        }
+        h1{
+            @include textStyle($white, left, 4.25rem, mont, bold, 10rem 0 0 0, 0);
+        }
+        p{
+            @include textStyle($white, left, 1.3rem, coolvetica, lighter, 5rem 10rem 0 0, 0);
+        }
+    } 
+}
+#textHeroColFluid{
+    display: none;
+    h1{
+        padding-top: 2rem;
+        text-align: center;
+    }
+    p{
+        @include textStyle($black, left, 1rem, coolvetica, lighter, 0 1rem, 0);
+        @include textStyleAt992px();
+        text-align: center;
+    }
+}
+@media(max-width:1400px){
+    #heroContent{
+        h1{
+            font-size: 3.5rem !important;
+        }
+        p{
+            font-size: 1rem !important;
+            padding-top: 5rem !important;
+            padding-right: 6rem !important;
+        }
+    }
+    #logoCol{
+        img{
+            padding-top: 2rem !important;
+        }
+    }
+}
+@media(max-width:950px){
+    #heroContent{
+        h1{
+            font-size: 2.5rem !important;
+        }
+        p{
+            font-size: .75rem !important;
+            padding-top: 2.5rem !important;
+            padding-right: 4rem !important;
+        }
+    }
+    #logoCol{
+        img{
+            padding-top: 0 !important;
+        }
+    }
+}
+@media(max-width:768px){
+    #textHeroCol{
+        display: none;
+    }
+    #logoCol img{
+        width: 50%;
+    }
+    #textHeroColFluid{
+        display: block;
+    }
+}   

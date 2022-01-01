@@ -1,0 +1,62 @@
+@import "mixins";
+@import "variables";
+#zaDomot{
+    #zaDomotTextRow{
+        padding: 0;
+        #zaDomotText{
+            @include textStyle($black, left, 1.55rem, coolvetica, lighter, 0, 0);
+            a{
+                @include buttonStyle();
+                display: inline-block;
+                margin-top: 2.5rem;
+                opacity: 0;
+            }
+        }
+    }
+    .row{
+        padding: 2rem;
+        #zaDomotImgAndMoto{
+            text-align: right;
+            #moto{
+                margin-top: 1.2rem;
+                display: inline-block;
+                font-family: lemonTuesday;
+                font-size: 1.75rem;
+                opacity: 0;
+                span{
+                   color:#b5b5b5;
+                   font-family: coolvetica;
+                }
+            }
+        }
+    }
+}
+.sectionHeading{
+    @include sectionHeading($black);
+}
+@media(max-width:1200px){
+    #zaDomotText{
+        font-size: 1.2rem !important;
+        a{
+            font-size: 1rem !important;
+        }
+    }
+}
+@media(max-width:992px){
+    #zaDomotHeadingRow{
+        padding-bottom: 0 !important;
+    }
+    #zaDomotText{
+        @include textStyleAt992px();
+        a{
+            margin-top: 0 !important;
+            margin-bottom: 3rem !important;
+        }
+    }
+    #zaDomotImgAndMoto{
+        text-align: center !important;
+        #moto{
+            font-size: 1.55rem !important;
+        }
+    }
+}

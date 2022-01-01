@@ -1,0 +1,97 @@
+@import "mixins.scss";
+@import "variables.scss";
+#kontaktSection{
+    background-color: $black;
+    margin-top: 7rem;
+    #kontaktHeading{
+        h1{
+            @include sectionHeading($white);
+            margin-bottom: 0;
+        }
+        p{
+            @include textStyle($white, center, 1.25rem, coolvetica, lighter, 0, 0);
+            margin-bottom: 1rem;
+        }
+        padding-top: 3.5rem;
+        padding-bottom: 2rem;
+        opacity: 0;
+    }
+    #kontaktInfo{
+        strong{
+            font-size: 1.15rem;
+        }
+        border: 3px solid #ffa200;
+        padding: 1rem !important;
+        max-height: 360px;
+        opacity: 0;
+        @include textStyle($white, center, 1rem, coolvetica, initial, 0, 0);
+        a{
+            @include textStyle($white, center, 1rem, coolvetica, lighter, 0, 0);
+            text-decoration: none;
+            outline: none;
+        }
+        div{
+            margin: 1.6rem 0;
+        }
+    }
+    #forma{
+        padding: 0 2rem;
+        text-align: center;
+        opacity: 0;
+        a{
+            @include buttonStyle();
+            margin-top: 1.6rem;
+            display: inline-block;
+            opacity: 0;
+        }
+        #formaTextInputs{
+            input{
+                padding: .5rem 1.4rem;
+                outline: none;
+                border-radius: 30px;
+                border: 3px solid #ffa200;
+                margin: 1rem;
+                width: 87%;
+            }
+            .col-md-6{
+                padding: 0;
+            }
+        }
+        #formaTextarea{
+            display: flex;
+            justify-content: space-around;
+            textarea{
+                margin-top: 1rem !important;
+                padding: .5rem 1.4rem;
+                outline: none;
+                border-radius: 40px;
+                resize: none;
+                width: 100%;
+                border: 3px solid #ffa200;
+                margin: 1rem;
+            }
+        }
+    }
+    #mapa{
+        margin-top: 6rem;
+        opacity: 0;
+        padding-bottom: 5rem;
+    }
+}
+@media(max-width:992px){
+    #kontaktInfo{
+        font-size: .7rem !important;
+        a{
+            font-size: .7rem !important;
+        }
+        div{
+            margin: .9rem 0 !important;
+        }
+    }
+    .fa-facebook{
+        display: none !important;
+    }
+    #mapa{
+        margin-top: 2.2rem !important;
+    }
+}

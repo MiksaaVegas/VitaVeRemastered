@@ -1,0 +1,70 @@
+@import "mixins.scss";
+@import "variables.scss";
+footer{
+    border-top: 3px solid #ffa200;
+    background: rgb(255,162,0);
+    background: linear-gradient(180deg, rgba(255,162,0,1) 0%, rgba(255,235,0,1) 100%);
+    #footerLeftColumn{
+        img{
+            object-fit: contain;
+            width: 256px;
+            height: 256px;
+        }
+        ul{
+            display: inline-block;
+            vertical-align: bottom;
+            border-left: 1px solid #000000;
+            li{
+                list-style-type: none;
+                a{
+                    text-decoration: none;
+                    @include textStyle($black, center, .8rem, mont, lighter, 0, 0)
+                }
+            }
+        }
+    }
+    #footerRightColumn{
+        text-align: center;
+        h2{
+            font-family: coolvetica;
+            padding-top: 1rem;
+        }
+        p{
+            margin-bottom: 0 !important;
+            @include textStyle($black, center, .8rem, mont, lighter, 0, 0);
+        }
+        .copyright{
+            opacity: .8;
+            font-size: .7rem;
+            display: inline-block;
+            padding-top: 1rem;
+        }
+    }
+    #motoFooter{
+        display: block;
+        margin-top: 1rem;
+        font-family: lemonTuesday;
+        font-size: 1.5rem;
+        span{
+            color:$black;
+            font-family: coolvetica;
+        }
+    }
+}
+@media(max-width:992px){
+    #footerLeftColumn{
+        i{
+            display: none;
+        }
+    }
+}
+@media(max-width:490px){
+    #footerLeftColumn{
+        text-align: center;
+        ul{
+            padding: 0;
+            border-left: none !important;
+            border-top: 1px solid #000000;
+        }
+    }
+}

@@ -1,0 +1,89 @@
+@import "mixins";
+@import "variables";
+#interierGalerijaHeadingSection{
+    svg{
+        z-index: -10;   
+    }
+    h1{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-75%);
+        padding-top: 2rem;
+        z-index: 10;
+        color: $white;
+        font-size: 6rem;
+        font-family:brushType;
+        .morphing{
+            font-size: 4rem;
+            left: 25%;
+        }
+    }
+}
+#interierGalerijaGrid{
+    .row{
+        padding: 2rem 0rem;
+        text-align: center;
+    }
+}
+#interierGalerijaBtnParent{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+@media(max-width:1570px){
+    #interierGalerijaHeadingSection{
+        h1{
+            padding-top: 1rem;
+            font-size: 3.6rem;
+            .morphing{
+               font-size: 2.5rem; 
+            }
+        }
+    }
+}
+@media(max-width:992px){
+    #interierGalerijaGrid{
+        display: flex;
+        justify-content: center;
+        .container{
+            margin: 0;
+            .row{
+                padding: 0rem;
+                img{
+                    padding: 1.5rem 0rem;
+                }
+            }
+        }
+    }
+    #fadeInOnScrollImg1,
+    #fadeInOnScrollImg2,
+    #fadeInOnScrollImg3,
+    #fadeInOnScrollImg4,
+    #fadeInOnScrollImg5,
+    #fadeInOnScrollImg6,
+    #interierGalerijaBtnParent a{
+        opacity: 0;
+    }   
+}
+@media(max-width:768px){
+    #interierGalerijaHeadingSection{
+        h1{
+            padding-top: 1.2rem !important;
+            font-size: 2.7rem !important;
+            .morphing{
+               font-size: 2.5rem !important; 
+            }
+        }
+    }
+}
+@media(max-width:576px){
+    #interierGalerijaHeadingSection{
+        h1{
+            padding-top: .3rem !important;
+            font-size: 1.6rem !important;
+            .morphing{
+               font-size: 1.1rem !important; 
+            }
+        }
+    }
+}

@@ -1,0 +1,123 @@
+@import "mixins";
+@import "variables";
+#stoViNudiVitaVeHeading{
+    svg{
+        z-index: -10;   
+    }
+    h1{
+        position: absolute;
+        left: 55%;
+        transform: translateX(-75%);
+        padding-top: 5rem;
+        z-index: 10;
+        color: $white;
+        font-size: 6rem;
+        font-family:brushType;
+        .morphing{
+            left: 30%;
+        }
+    }
+}
+#stoViNudimeList{
+    i{
+        transition: .6s color ease-in-out;
+        &:hover{
+            color: #ffa200;
+        }
+    }
+    .col-lg-5{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        @include textStyle($black, left, 1.2rem, coolvetica, lighter, .5rem 0 0 0, 0);
+    }
+    #leftIconColumn{
+        text-align: right;
+        font-size: 1.3rem;
+        padding-top: .3rem;
+        .fa-hiking{
+            padding-top: 1.2em;
+        }
+    }
+    #rightIconColumn{
+        text-align: right;
+        font-size: 1.3rem;
+        padding-top: .75rem;
+        .fa-gamepad{
+            padding-top: 1.3em;
+        }
+        .fa-home{
+            padding-top: 1em;
+        }
+        .fa-dumbbell{
+            padding-top: 1.15em;
+        }
+        .fa-users{
+            padding-top: 1.05em;
+        }
+        .fa-first-aid{
+            padding-top: 2.3em;
+        }
+    }
+}
+  
+.morphing {
+    font-size: 6rem;
+    font-family: doubleBass;
+    color: $white;
+    filter: contrast(25) blur(1px);
+    position: absolute;
+    left: 75%;
+    transform: translateX(-25%);
+}
+.word{
+    position: absolute;
+    left: 75%;
+    transform: translateX(-25%);
+    z-index: 10;
+    animation: word $speed infinite ease-in-out;
+    @for $i from 0 to $wordCount{
+        &:nth-child(#{$i + 1}){
+            animation-delay: ($speed / ($wordCount + 1) * $i) - $speed;
+        }
+    }
+    @keyframes word{
+        0%, 5%, 100% { filter: blur(0px); opacity: 1; }        
+        20%, 80% { filter: blur(1em); opacity: 0; }        
+    }
+}
+#stoViNudimeButtonCol{
+    margin-bottom: 2rem;
+}
+.backToHomeButton{
+    @include buttonStyle();
+    margin-top: 2.4rem;
+}
+#stoViNudimeButtonCol{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+@media(max-width:1500px){
+    #stoViNudimeHeading{
+        font-size: 4rem !important;
+        .morphing{
+            font-size: 4rem !important; 
+        }
+    }
+}
+@media(max-width:992px){
+    .fas{
+        display: none !important;
+    }
+    p{
+        @include textStyleAt992px();
+    }
+    #stoViNudimeHeading{
+        font-size: 1.3rem !important;
+        .morphing{
+            font-size: 1.3rem !important; 
+        }
+        margin-top: -70px !important;
+    }
+}

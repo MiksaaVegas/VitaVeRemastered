@@ -1,0 +1,43 @@
+@import "mixins";
+@import "variables";
+.stoMislatKlientiteRow{
+    opacity: 0;
+    .col-md-4{
+        display: flex;
+        justify-content: center;
+        .card{
+            padding: 1rem;
+            -webkit-box-shadow: 0px 0px 32px -8px #000000; 
+            box-shadow: 0px 0px 32px -8px #000000;
+            border-radius: 1.5rem;
+            transition: transform .5s ease-in-out, box-shadow .5s ease-in-out;
+            &:hover{
+                -webkit-box-shadow: 0px 0px 30px 0px #000000; 
+                box-shadow: 0px 0px 30px 0px #000000;
+                transform: scale(1.08);
+            }
+            img{
+                border-radius: 1.5rem; 
+            }
+        }
+    }
+}
+.stoMislatKlientiteHeading{
+    text-align: center;
+    @include sectionHeading($black);
+    padding: 3rem 0;
+    opacity: 0;
+}
+@media(max-width: 767px){
+    .mobileFriendlyCards{
+        margin-top: 4.3rem;
+    }
+    .stoMislatKlientiteRow{
+        opacity: 1;
+    }
+    #klientiCard1,
+    #klientiCard2,
+    #klientiCard3{
+        opacity: 0;
+    }
+}

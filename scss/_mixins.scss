@@ -1,0 +1,73 @@
+@mixin textStyle($color, $textAlign, $fontSize, $fontFamily, $fontWeight, $padding, $margin){
+    color: $color;
+    text-align: $textAlign;
+    font-size: $fontSize;
+    font-family: $fontFamily;
+    font-weight: $fontWeight;
+    padding: $padding;
+    margin: $margin;
+}
+@mixin sectionHeading($color){
+    color: $color;
+    text-align: center;
+    font-size: 2.4rem;
+    font-family: mont;
+    font-weight: bolder;
+    padding: .65rem 1.25rem .5rem 1.25rem;
+    margin: 0 0 .6rem 0;
+    text-decoration: underline;
+    text-decoration-color: #ffa200;
+    text-decoration-thickness: 3px;
+}
+@mixin buttonStyle(){
+    color: #fff;
+    text-decoration: none;
+    padding: .6rem 1.175rem;
+    font-size: 1.1rem;
+    font-family: coolvetica;
+    font-weight: lighter;
+    background-color: #ffa200;
+    border-radius: 50px;
+    outline: none;
+    -webkit-box-shadow: 0px 0px 10px 0px #000000, inset 0px 0px 13px 1px #FFF915; 
+    box-shadow: 0px 0px 10px 0px #000000, inset 0px 0px 13px 1px #FFF915;
+    transition: box-shadow .5s ease-in-out;
+    p{
+        display: inline-block;
+        margin: 0;
+    }
+    &:hover{
+        color: #fff;
+        -webkit-box-shadow: 0px 0px 22px 0px #000000, inset 0px 0px 21px 5px #FFF915; 
+        box-shadow: 0px 0px 22px 0px #000000, inset 0px 0px 21px 5px #FFF915;
+        transition: box-shadow .5s ease-in-out;
+    }
+}
+@mixin textStyleAt992px(){
+    font-size: 1rem !important;
+    font-weight: lighter !important;
+    padding: 0 .1rem !important;
+    text-align: center !important;
+    padding: 0 1rem !important;
+}
+@font-face {
+    font-family:"coolvetica";
+    src: url(../fonts/coolvetica.ttf);
+}
+@font-face {
+    font-family:"mont";
+    src: url(../fonts/mont.otf);
+}
+@font-face {
+    font-family:"lemonTuesday";
+    src: url(../fonts/lemonTuesday.otf);
+}
+@font-face {
+    font-family:"brushType";
+    src: url(../fonts/brushType.ttf);
+}
+@font-face {
+    font-family:"doubleBass";
+    src: url(../fonts/doubleBass.ttf);
+}
+

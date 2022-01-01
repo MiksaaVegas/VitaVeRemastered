@@ -1,0 +1,50 @@
+@import "mixins";
+@import "variables";
+#nastaniSection{
+    background-color: $black;
+    margin-top: 6rem;
+    padding: 4rem 0;
+    h1{
+        opacity: 0;
+        @include sectionHeading($white);
+    }
+    #nastaniSubtitle{
+        @include textStyle($white, center, 1.3rem, coolvetica, lighter, 0, 0);
+        margin-bottom: 3rem;
+        opacity: 0;
+    }
+    .nastaniRow{
+        opacity: 0;
+        .col-md-4{
+            display: flex;
+            justify-content: center;
+            .card{
+                padding: 1rem;
+                border-radius: 1.5rem;
+                transition: transform .5s ease-in-out;
+                &:hover{
+                    transform: scale(1.08);
+                }
+                img{
+                    border-radius: 1.5rem; 
+                }
+                #nastaniBadge{
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+}
+@media(max-width:768px){
+    #nastaniCard2{
+        margin: 3rem 0;
+    }
+    .nastaniRow{
+        opacity: 1 !important;
+    }
+    #nastaniCard1,
+    #nastaniCard2,
+    #nastaniCard3{
+        opacity: 0;
+    }
+}

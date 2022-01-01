@@ -1,0 +1,56 @@
+@import "mixins";
+@import "variables";
+#timSection{
+    #timHeading{
+        @include sectionHeading($black);
+        padding: 3rem 0;
+        opacity: 0;
+    }
+    #visiTimRow, #timRow{
+        @include textStyle(#a0a0a0, center, 1rem, coolvetica, normal, 0, 0);
+        opacity: 0;
+        h2{
+            margin: 0;
+            color: $black;
+            font-weight: lighter;
+        }
+        p{
+            margin: 0;
+        }
+        img{
+            border-radius: 50%;
+            padding-bottom: 1.5rem;
+            transition: transform .5s ease-in-out;
+            &:hover{
+                transform: scale(1.15);
+            }
+        }
+    }
+    #timRow{
+        padding-top: 5rem;
+    }
+    .timQuote{
+        @include textStyle(#a0a0a0, center, 1.3rem, lemonTuesday, normal, .1rem 0, 0);
+    }
+}
+@media(max-width:772px){
+    #timSection{
+        img{
+            padding-top: 2rem;
+        }
+        #visiTimRow, #timRow{
+            opacity: 1;
+        }
+    }
+    #timRow{
+        padding: 0 !important;
+    }
+    #visiTimRowPersonOne,
+    #visiTimRowPersonTwo,
+    #timRowPersonOne,
+    #timRowPersonTwo,
+    #timRowPersonThree,
+    #timRowPersonFour{
+        opacity: 0;
+    }
+}
